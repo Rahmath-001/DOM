@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    .heading {
+        background-color: aqua;
+        color: black;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <h1 id="heading" class="heading">This is heading</h1>
+    <h1>This is line 2</h1>
+    <h1 style="background-color: black; color:white">This is line 3</h1>
+    <div id="htmlbody"></div>
+    <div class="htmlbody"></div>
+    <button onclick="changeheading()">Click</button>
+    <button onclick="changetag()">Change tag</button>
+</body>
+
+<script>
+
+    function changeheading() {
+        console.log(document)
+        console.log(document.getElementsByTagName("h1"))
+    let head=document.getElementById("heading");
+    head.innerText= "This is new";
+    console.log("I am called");
+    }
+   
+    function changetag() {
+        let tag=document.getElementById("htmlbody");
+        tag.innerHTML='<h1>This is from JS </h1>';
+    }
+
+    // console.log(document.getElementsByTagName("h1")[1]);
+    // console.log(document.querySelector("h1"));
+    // console.log(document.querySelectorAll("h1").length);
+    // console.log(document.querySelectorAll("h1")[1]);
+    console.log(document.querySelector(".htmlbody"));
+    console.log(document.querySelector(".heading").innerText);
+
+    let head=document.getElementById("heading");
+    head.style="background-color:gold; color:white";
+    head.innerText="This is VERY";
+
+</script>
+</html>
