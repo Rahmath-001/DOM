@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONT-CONVERTER</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Amatic+SC&family=Dancing+Script&family=Silkscreen&display=swap');
+
+    /*     
+@font-face {
+    font-family: file name ;
+    src: url(file location);
+} */
+
+
+
+</style>
+
+
+</head>
+<body>
+        <div class="container">
+            <h1>Font Converter</h1>
+            <form onsubmit="changefont(event)">
+                    <p><label for="text">ENTER YOUR TEXT HERE :</label></p>
+                    <textarea id="textinput" name="textinput" rows="4" cols="50" placeholder="Enter your text here."></textarea>
+                    <br> <br>
+
+
+                    <label for="fontFamily">Choose a font Family:</label>
+
+                    <select name="fonts" id="fonts">
+                      <option value="'Aboreto', cursive">Aboreto</option>
+                      <option value="'Silkscreen', cursive">Silkscreen</option>
+                      <option value="'Amatic SC', cursive">Amatic</option>
+                      <option value="'Dancing Script', cursive">Dancing script</option>
+                    </select>
+                    <br><br>
+
+                <input type="submit" value="Submit">
+              </form> 
+              <br><br>
+              <textarea id="newtext" cols="40" rows="4" placeholder="Text Converted."></textarea>
+              <br>
+            </div>
+
+            <footer>
+                &copy; Copyrights. All rights reserved
+                <!-- <script>
+                    document.write(new Date().getFullYear());
+                </script> -->
+            </footer>
+</body>
+
+<script>
+
+function changefont(event){
+    event.preventDefault();
+    let text=document.getElementById("textinput");
+    console.log(text);
+    let fontname=document.getElementById("fonts").value;
+console.log(fontname);
+    let newtext=document.getElementById("newtext").value;
+    console.log(newtext)
+    newtext.innerText= text;
+    newtext.style.fontFamily = fontname;
+}
+
+</script>
+
+</html>
