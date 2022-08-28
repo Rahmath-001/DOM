@@ -59,13 +59,15 @@
 
 function changefont(event){
     event.preventDefault();
-    let text=document.getElementById("textinput");
+    let text=document.getElementById("textinput").value;
     console.log(text);
+
     let fontname=document.getElementById("fonts").value;
-console.log(fontname);
-    let newtext=document.getElementById("newtext").value;
-    console.log(newtext)
-    newtext.innerText= text;
+    console.log(fontname);
+
+    let newtext=document.getElementById("newtext");
+    // console.log(newtext)
+    newtext.innerText=text;
     newtext.style.fontFamily = fontname;
 }
 
