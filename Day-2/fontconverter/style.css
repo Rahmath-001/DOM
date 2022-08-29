@@ -8,7 +8,7 @@ form {
     border: 2px black solid;
     width: 80%;
     border-radius: 6px ;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
 }
 
 
@@ -21,17 +21,20 @@ form {
 #textinput {
     border-radius: 6px;
     padding: 7px;
+    background-color: #faf1e3;
 }
 
 #newtext {
     border-radius: 6px;
-    max-width: 57%;
+    max-width: 56%;
     padding: 7px;
+    background-color: #faf1e3;
 }
 
 
 .submitbuttton{
     border-radius: 8px;
+    padding: 5.5px;
 }
 .submitbuttton:hover {
     font-size: 13px;
