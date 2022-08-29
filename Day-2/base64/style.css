@@ -1,36 +1,53 @@
 body {
     display: flex;
     justify-content: center;
-    background: rgb(233,100,35);
-    background: linear-gradient(90deg, rgba(233,100,35,1) 13%,
-     rgba(161,6,216,1) 49%);
+    
+    background: rgb(84,234,246);
+    background: linear-gradient(90deg, rgba(84,234,246,1) 13%,
+     rgba(64,184,251,1) 100%);
+
 }
 
 
 
 
 .container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     margin-top: 100px;
     width: 40%;
-    padding: 10px;
-    border: 6px black solid;
+    padding-top: 7px;
+    padding-bottom: 30px;
+    border: 6px white solid;
+    box-shadow: 5px 10px rgb(44, 42, 42);
     border-radius: 30px;
 }
 
 
 
+
+.lable {
+    font-size: x-large;
+}
+
+#choosecodetype {
+    font-size: x-large;
+}
+
+
 .buttonsarea button{
-    background: #5e17eb;
+    background: white;
+    margin: 5%;
     border: 0;
-    padding: 10px 24px;
-    color: #fff;
+    padding: 10px 10px;
+    color: black;
     transition: 0.4s;
     border-radius: 5px;
+    box-shadow: 4px 5px rgb(44, 42, 42);
 }
 
 .buttonsarea button:hover {
-    
+    font-size: 12px;
     border: 3px rgb(14, 73, 222) solid;
     border-radius: 5px;
 }
@@ -42,13 +59,14 @@ body {
     padding: 12px;
     border-radius: 6px;
     min-width: 90%;
-    background-color: rgb(173, 173, 246);
+    background-color: rgb(201, 244, 248);
 }
+
 
 #newtext {
     font-size:19px;
     padding: 12px;
     border-radius: 6px;
     min-width: 90%;
-    background-color: rgb(173, 173, 246);
+    background-color: rgb(201, 244, 248);
 }
