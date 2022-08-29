@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>GAME-1</title>
+</head>
+<body>
+    
+    <div>
+    <h1>HIDDEN NUMBERS</h1>
+    <h1>Welcome  <span id="player-name"></span></h1>
+    <h1>Attempts : <span id="attempts"></span></h1>
+    </div>
+
+    <div>
+    <table id="my-game">
+
+    </table>
+    </div>
+
+</body>
+
+
+<script>
+
+    function main() {
+        // let username=prompt("Enter your Name :");
+        // document.getElementById("player-name").innerText=username;
+
+        const tabledata=[];
+        for(let i=1;i<=100;i++){
+            tabledata.push(i);
+        }
+        console.log(tabledata);
+
+        let table=document.getElementById("my-game");
+        let row,
+            col,
+            counter=0;
+
+        for(let i=1;i<=10;i++){
+            row=document.createElement("tr");
+            for(let j=1;j<=10;j++){
+                col=document.createElement("td");
+                col.id=counter+1;
+                col.innerText=tabledata[counter];
+                row.appendChild(col);
+                counter++;
+            }
+            table.appendChild(row);
+        }
+
+
+    }
+
+
+main();
+
+</script>
+
+
+</html>
