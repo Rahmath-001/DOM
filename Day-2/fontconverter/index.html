@@ -28,11 +28,11 @@
             <h1>Font Converter</h1>
             <form onsubmit="changefont(event)">
                     <p><label for="text">ENTER YOUR TEXT HERE :</label></p>
-                    <textarea id="textinput" name="textinput" rows="4" cols="50" placeholder="Enter your text here."></textarea>
+                    <textarea id="textinput" name="textinput" rows="4" cols="40" placeholder="Enter your text here."></textarea>
                     <br> <br>
 
 
-                    <label for="fontFamily">Choose a Font Family:</label>
+                    <label id="choosefont" for="fontFamily">Choose a Font Family:</label>
 
                     <select name="fonts" id="fonts">
                       <option value="'Aboreto', cursive">Aboreto</option>
@@ -45,18 +45,14 @@
                 <input type="submit" class="submitbuttton" value="Submit">
              
               <br><br>
-              <textarea id="newtext" cols="40" rows="4" placeholder="Text Converted."></textarea>
+              <textarea id="newtext"  rows="4" cols="40" placeholder="Text Converted." readonly></textarea>
               <br>
             </form> 
             </div>
 
             <footer>
                 &copy; Copyrights. All rights reserved
-                <!-- <script>
-                    document.write(new Date().getFullYear());
-                </script> -->
             </footer>
-
         </center> 
 </body>
 
