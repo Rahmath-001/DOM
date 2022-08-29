@@ -10,3 +10,13 @@ form {
     border-radius: 6px ;
 }
 
+
+.submitbuttton{
+    border-radius: 8px;
+}
+.submitbuttton:hover {
+    font-size: 13px;
+    background-color:rgb(101, 114, 119)
+}
+
+
