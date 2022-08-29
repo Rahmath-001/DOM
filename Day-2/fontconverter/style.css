@@ -1,0 +1,12 @@
+body {
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg,
+     rgba(0,212,255,1) 16%, rgba(9,9,121,1) 86%);}
+
+form {
+    border: 2px black solid;
+    padding: 2px;
+    width: 80%;
+    border-radius: 6px ;
+}
+
