@@ -16,9 +16,10 @@
     </div>
 
     <div>
+        <center>
     <table id="my-game">
-
     </table>
+    </center>
     </div>
 
 </body>
@@ -26,34 +27,74 @@
 
 <script>
 
+let attempt=0
+
     function main() {
-        // let username=prompt("Enter your Name :");
-        // document.getElementById("player-name").innerText=username;
+        let username=prompt("Enter your Name :");
+        while (!username){
+            username= prompt("Username Cannot Be Empty, Please Try Again. ")
+        }
+        document.getElementById("player-name").innerText=username;
 
         const tabledata=[];
         for(let i=1;i<=100;i++){
             tabledata.push(i);
         }
         console.log(tabledata);
-
+        tabledata.sort(()=>Math.random()-0.5);
+        
         let table=document.getElementById("my-game");
         let row,
             col,
             counter=0;
+        let primearray=[2,3,5,7]
+        let visitedelements=[]
 
         for(let i=1;i<=10;i++){
+            //generating rows
             row=document.createElement("tr");
+
             for(let j=1;j<=10;j++){
+                //generating columns
                 col=document.createElement("td");
-                col.id=counter+1;
-                col.innerText=tabledata[counter];
+
+                col.id=tabledata[counter];
+                // col.innerText=tabledata[counter];
+
+                col.addEventListener("click",function(event){
+
+                    let clickednumber =event.target.id;
+                    console.log(clickednumber);
+                    if(clickednumber==1){
+                        // document.getElementById(clickednumber).innerText=clickednumber
+                        alert("You are a WINNER !!! ")
+                        location.reload("/");
+                    }
+                    else if (primearray.includes(+clickednumber)){
+                        alert("You are a LOSER !!! BETTER LUCK NEXT TIME...");
+                        location.reload("/");
+                    }
+                    else if (visitedelements.includes(+clickednumber)){
+                        alert("Block Already selected");
+                    }
+                    else {
+                        for(let i=+(clickednumber);i<100;i++){
+                            if (i%+(clickednumber)==0){
+                                document.getElementById(i).style.backgroundColor="white";
+                                visitedelements.push(i);
+                            }
+                        }
+                        attempt++;
+                        document.getElementById("attempts").innerText=attempt;
+                    }
+                });
+
                 row.appendChild(col);
+
                 counter++;
             }
             table.appendChild(row);
         }
-
-
     }
 
 

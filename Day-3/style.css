@@ -1,0 +1,51 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    background-color: rgb(8, 52, 52);
+}
+
+
+
+
+
+table {
+    justify-content: center;
+    text-align: center;
+    height: 90%;
+    width: 90%;
+    color: rgb(29, 150, 159);
+    font-family:monospace;
+    font-size: 20px;
+    background-color: rgb(8, 52, 52) ;
+    margin: 10px;
+    border: 2px rgb(29, 150, 159) solid;
+}
+
+
+
+#my-game {
+    border: 3px rgb(29, 150, 159) solid; 
+    border-radius: 5px;
+}  
+
+
+#my-game td {
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    color: rgb(29, 150, 159);
+    font-family:monospace;
+    font-size: 20px;
+    background-color: rgb(6, 15, 15) ;
+    margin: 10px;
+    border: 2px rgb(29, 150, 159) solid;
+}
+
+#my-game td:hover {
+    cursor: pointer;
+    background-color: rgb(148, 136, 136);
+}
+
