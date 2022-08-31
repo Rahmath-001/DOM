@@ -58,7 +58,7 @@ body {
     font-size:19px;
     padding: 12px;
     border-radius: 6px;
-    min-width: 90%;
+    min-width: 80%;
     background-color: rgb(201, 244, 248);
 }
 
@@ -67,10 +67,15 @@ body {
     font-size:19px;
     padding: 12px;
     border-radius: 6px;
-    min-width: 90%;
+    min-width: 80%;
     background-color: rgb(201, 244, 248);
 }
 
 
+@media screen {
+    textarea {
+        width: 12px;
+    }
+}
 
 
