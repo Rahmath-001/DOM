@@ -1,9 +1,11 @@
 body {
-    font-family:'Courier New', Courier, monospace;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    color: white;
+    color: rgb(6, 13, 28);
     justify-content: center;
-    background-color: rgb(8, 52, 52);
+    background: rgb(77,182,255);
+    background: radial-gradient(circle, rgba(77,182,255,1) 40%,
+     rgba(5,108,166,1) 74%);
 }
 
 
@@ -13,8 +15,6 @@ body {
 table {
     justify-content: center;
     text-align: center;
-    height: 90%;
-    width: 90%;
     color: rgb(29, 150, 159);
     font-family:monospace;
     font-size: 20px;
@@ -28,14 +28,15 @@ table {
 #my-game {
     border: 3px rgb(29, 150, 159) solid; 
     border-radius: 5px;
+   
 }  
 
 
 #my-game td {
     justify-content: center;
     text-align: center;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     color: rgb(29, 150, 159);
     font-family:monospace;
     font-size: 20px;

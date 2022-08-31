@@ -27,14 +27,29 @@
 
 <script>
 
+
+if(!localStorage.getItem("winners")){
+    localStorage.setItem("winners",JSON.stringify([]));
+    
+}
+
+
+
+
 let attempt=0
+let clicked=new Audio("Notification.mp3")
+let loosed=new Audio("looser.wav")
+let won=new Audio("winner.wav")
+let gamestart=new Audio("gamestart.wav")
 
     function main() {
-        let username=prompt("Enter your Name :");
-        while (!username){
-            username= prompt("Username Cannot Be Empty, Please Try Again. ")
-        }
-        document.getElementById("player-name").innerText=username;
+        // let username=prompt("Enter your Name :");
+        // gamestart.play();
+        // while (!username){
+        //     username= prompt("Username Cannot Be Empty, Please Try Again. ")
+        //     gamestart.play();
+        // }
+        // document.getElementById("player-name").innerText=username;
 
         const tabledata=[];
         for(let i=1;i<=100;i++){
@@ -67,10 +82,12 @@ let attempt=0
                     console.log(clickednumber);
                     if(clickednumber==1){
                         // document.getElementById(clickednumber).innerText=clickednumber
+                        won.play();
                         alert("You are a WINNER !!! ")
                         location.reload("/");
                     }
                     else if (primearray.includes(+clickednumber)){
+                        loosed.play();
                         alert("You are a LOSER !!! BETTER LUCK NEXT TIME...");
                         location.reload("/");
                     }
@@ -85,6 +102,7 @@ let attempt=0
                             }
                         }
                         attempt++;
+                        clicked.play();
                         document.getElementById("attempts").innerText=attempt;
                     }
                 });
@@ -101,6 +119,8 @@ let attempt=0
 main();
 
 </script>
+
+<script src="leaderboard.js"></script>
 
 
 </html>
