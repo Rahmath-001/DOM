@@ -20,7 +20,8 @@ function newRankings(winnerData, newWinner) {
             temp.push(winnerData[i]);
         }
     }
-    newWinners.push(temp);
+    // newWinners.push(temp);
+    temp.push(winnerData[i]);
     return newWinners;
 }
 
