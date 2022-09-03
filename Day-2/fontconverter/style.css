@@ -6,7 +6,7 @@ body {
 
 form {
     border: 2px black solid;
-    width: 80%;
+    width: 70%;
     border-radius: 6px ;
     padding-bottom: 16px;
 }
@@ -26,7 +26,8 @@ form {
 
 #newtext {
     border-radius: 6px;
-    max-width: 56%;
+    width: 300px;
+    /* max-width: 56%; */
     padding: 7px;
     background-color: #faf1e3;
 }
